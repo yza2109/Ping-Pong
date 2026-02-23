@@ -17,13 +17,28 @@ let xRaqueteOponente = 585;
 let yRaqueteOponente = 150;
 
 //Placar
-let meusPontos = 0;
+let meusPontos = 0; 
 let pontosOponente = 0;
 
-function setup() {
-     createCanvas(600,400);
+function setup(){
+  createCanvas(600.400);
 }
 
 function draw(){
   
+}
+
+function movimento(){
+  circle (xBolinha,yBolinha,diametro);
+  
+     xBolinha += velocidadeXBolinha;
+     yBolinha += velocidadeYBolinha;
+     if(xBolinha + raio > width || xBolinha-raio < 0){
+         velocidadeXBolinha *= -1;
+     }
+     if(yBolinha + raio > height || yBolinha-raio < 0){
+         velocidadeYBolinha *= -1}}
+
+function raquetes(xRaquete,yRaquete){
+    rect(xRaquete,yRaquete,10,90)
 }
